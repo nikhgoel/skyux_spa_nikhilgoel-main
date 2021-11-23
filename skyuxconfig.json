@@ -1,0 +1,6 @@
+{
+  "$schema": "./node_modules/@skyux/config/skyuxconfig-schema.json",
+  "styles": "@skyux/ag-grid/css/sky-ag-grid.css",
+  "mode": "easy",
+  "compileMode": "aot"
+}

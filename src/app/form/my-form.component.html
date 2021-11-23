@@ -1,0 +1,29 @@
+
+<link
+rel="stylesheet"
+href="https://unpkg.com/@ag-grid-community/all-modules@26.2.0/dist/styles/ag-grid.css" />
+
+<link
+rel="stylesheet"
+href="https://unpkg.com/@ag-grid-community/all-modules@26.2.0/dist/styles/ag-theme-alpine.css" />
+<div
+  [skyTheme]="modernLightTheme" style="width: 600px; padding-left: 20px; padding-bottom: 20px;"
+>
+<br/>
+<button  class="sky-btn sky-btn-default"
+type="button"
+(click)="onOpenModalClick()">Register</button>
+<button  class="sky-btn sky-btn-default"
+type="button" style="margin-left: 20px;"
+(click)="refresh()">Refresh</button>
+<br/>
+<br/>
+<ag-grid-angular
+    style="width: 1200px; height: 300px;"
+    class="ag-theme-alpine"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    (gridReady)="onGridReady($event)"
+>
+</ag-grid-angular>
+</div>

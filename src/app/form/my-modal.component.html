@@ -1,0 +1,118 @@
+<sky-modal>
+    <sky-modal-header>
+      Registration
+    </sky-modal-header>
+    <sky-modal-content>
+        <sky-input-box>
+            <label
+              class="sky-control-label"
+            >
+              First Name
+            </label>
+        
+        
+            <input
+              class="sky-form-control"
+              id="myInput"
+              type="text"
+              [(ngModel)]='Name'
+            >
+        
+        </sky-input-box>
+        <br />
+        <sky-input-box>
+          <label
+            class="sky-control-label"
+          >
+            Last Name
+          </label>
+        
+        
+          <input
+            class="sky-form-control"
+            id="lastname"
+            type="text"
+            [(ngModel)]='LastName'
+          >
+        
+        </sky-input-box>
+          <br />
+          <sky-input-box>
+            <label
+              class="sky-control-label"
+            >
+              Contact number
+            </label>
+        
+        
+            <input
+              class="sky-form-control"
+              id="Contact"
+              type="number"
+              [(ngModel)]='ContactNumber'
+            >
+        </sky-input-box>
+        <br />
+        <sky-input-box>
+          <label
+            class="sky-control-label"
+          >
+            Email
+          </label>
+        
+        
+          <input
+            class="sky-form-control"
+            id="Email"
+            type="email"
+            [(ngModel)]='Email'
+          >
+        </sky-input-box>
+        <br/>
+        <sky-input-box>
+          <label
+            class="sky-control-label"
+          >
+            Date of Birth
+          </label>
+        <sky-datepicker>
+              <input
+                id="myDate"
+                skyDatepickerInput
+                type="text"
+                [(ngModel)]='DOB'
+              />
+            </sky-datepicker>
+        </sky-input-box>
+        <br/>
+        <sky-input-box>
+          <label
+            class="sky-control-label"
+            for="myTextarea"
+          >
+            Address
+          </label>
+          <textarea
+            class="sky-form-control"
+            id="myTextarea"
+            [(ngModel)]='Address'
+          ></textarea>
+        </sky-input-box>
+    </sky-modal-content>
+    <sky-modal-footer>
+      <button
+        class="sky-btn sky-btn-primary sky-margin-inline-compact"
+        type="button"
+        (click)="SaveData()"
+      >
+        Save
+      </button>
+      <button
+        class="sky-btn sky-btn-link"
+        type="button"
+        (click)="instance.close()"
+      >
+        Close
+      </button>
+    </sky-modal-footer>
+  </sky-modal>
