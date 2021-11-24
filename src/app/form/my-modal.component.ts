@@ -2,6 +2,7 @@ import {
   Component
 } from '@angular/core';
 import { SkyModalInstance } from '@skyux/modals';
+import {  Observable } from 'rxjs';
 import { CommonService } from '../services/common.service';
 
 @Component({
@@ -30,5 +31,6 @@ SaveData(){
   this.commonService.data.push(tempData);
   this.instance.close();
   console.log(this.commonService.data);
+  this.commonService.observerData.next(this.commonService.data);
 }
 }

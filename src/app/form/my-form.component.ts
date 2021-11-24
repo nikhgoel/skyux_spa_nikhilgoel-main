@@ -32,6 +32,9 @@ constructor(private modal: SkyModalService, private commonService : CommonServic
   ngOnInit(): void {
     this.data = this.commonService.tempData;
     this.rowData = [];
+    this.commonService.observerData.subscribe(
+      value =>  {this.rowData = value}
+    );
   }
 
   @Input()
