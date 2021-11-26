@@ -33,7 +33,9 @@ constructor(private modal: SkyModalService, private commonService : CommonServic
     this.data = this.commonService.tempData;
     this.rowData = [];
     this.commonService.observerData.subscribe(
-      value =>  {this.rowData = value}
+      value =>  {this.rowData = value;
+        if(this.gridApi != undefined){
+        this.gridApi.setRowData(this.rowData);}}
     );
   }
 
@@ -64,5 +66,8 @@ constructor(private modal: SkyModalService, private commonService : CommonServic
   refresh(){
     this.rowData = this.commonService.data;
     this.gridApi.setRowData(this.rowData);
+  }
+  demoMethod(){
+    return 'Hello World';
   }
 }

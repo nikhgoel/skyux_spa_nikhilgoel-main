@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\app"
+    "\\src\\app",
+    "\\src\\app\\form",
+    "\\src\\app\\services"
   ],
-  "SelectedNode": "\\package.json",
+  "SelectedNode": "\\src\\app\\form\\my-form.component.ts",
   "PreviewInSolutionExplorer": false
 }

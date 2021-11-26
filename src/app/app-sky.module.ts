@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import {
   SkyAvatarModule
 } from '@skyux/avatar';
-import { SkyInputBoxModule } from '@skyux/forms';
+import { SkyFileAttachmentsModule, SkyInputBoxModule } from '@skyux/forms';
 import { FormsModule } from '@angular/forms';
 import {
   SkyAlertModule,
@@ -36,7 +36,8 @@ import { BrowserModule } from '@angular/platform-browser';
     SkyInputBoxModule,
     SkyDatepickerModule,
     SkyThemeModule,
-    SkyModalModule
+    SkyModalModule,
+    SkyFileAttachmentsModule
   ]
 })
 export class AppSkyModule { }

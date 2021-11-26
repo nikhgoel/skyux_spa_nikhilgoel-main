@@ -68,9 +68,19 @@ describe('My modal component', () => {
       }
     )
   );
+
+it('should call method', fakeAsync(() =>{
+  const fixture = TestBed.createComponent(MyFormComponent);
+  fixture.detectChanges();
+    var demo = fixture.componentInstance;
+    expect(demo.demoMethod()).toMatch('Hello World');
+    flush();
+}));
+
   it('should launch and save data with the modal', fakeAsync(() => {
     const fixture = TestBed.createComponent(MyFormComponent);
     fixture.detectChanges();
+
     tick();
     let launchModalButtonEl
       = fixture.nativeElement.querySelector('.sky-btn.sky-btn-default') as HTMLButtonElement;
